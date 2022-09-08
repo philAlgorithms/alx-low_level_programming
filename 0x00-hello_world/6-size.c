@@ -2,7 +2,7 @@
 
 /**
  * main - Primary "Prints tge size of various computer types in byte"
- * 
+ *
  * Return: Always 0.
  */
 
