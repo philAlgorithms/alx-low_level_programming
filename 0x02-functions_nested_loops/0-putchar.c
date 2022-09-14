@@ -10,7 +10,7 @@
 
 int main() {
 	char* letters = "_putchar\n";
-	while(letters){
+	while(*letters){
 		_putchar(*letters++);
 	}
 	return (0);
