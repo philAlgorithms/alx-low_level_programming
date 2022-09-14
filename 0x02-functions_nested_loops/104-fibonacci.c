@@ -10,30 +10,29 @@
 int main(void)
 {
 	int index;
-	unsigned long fibonnaci1 = 0, fibonnaci2 = 1, summation;
-	unsigned long fibonnaci1_split1, fibonnaci1_split2;
-	unsigned long fibonnaci2_split1, fibonnaci2_split2;
+	unsigned long fibb1 = 0, fibb2 = 1, summation;
+	unsigned long fibb1_split1, fibb1_split2, fibb2_split1, fibb2_split2;
 	unsigned long split1, split2;
 
 	for (index = 0; index < 92; index++)
 	{
-		summation = fibonnaci1 + fibonnaci2;
+		summation = fibb1 + fibb2;
 		printf("%lu, ", summation);
 
-		fibonnaci1 = fibonnaci2;
-		fibonnaci2 = summation;
+		fibb1 = fibb2;
+		fibb2 = summation;
 	}
 
-	fibonnaci1_split1 = fibonnaci1 / 10000000000;
-	fibonnaci2_split1 = fibonnaci2 / 10000000000;
-	fibonnaci1_split2 = fibonnaci1 % 10000000000;
-	fibonnaci2_split2 = fibonnaci2 % 10000000000;
+	fibb1_split1 = fibb1 / 10000000000;
+	fibb2_split1 = fibb2 / 10000000000;
+	fibb1_split2 = fibb1 % 10000000000;
+	fibb2_split2 = fibb2 % 10000000000;
 
 	for (index = 93; index < 99; index++)
 	{
-		split1 = fibonnaci1_split1 + fibonnaci2_split1;
-		split2 = fibonnaci1_split2 + fibonnaci2_split2;
-		if (fibonnaci1_split2 + fibonnaci2_split2 > 9999999999)
+		split1 = fibb1_split1 + fibb2_split1;
+		split2 = fibb1_split2 + fibb2_split2;
+		if (fibb1_split2 + fibb2_split2 > 9999999999)
 		{
 			split1 += 1;
 			split2 %= 10000000000;
@@ -43,10 +42,10 @@ int main(void)
 		if (index != 98)
 			printf(", ");
 
-		fibonnaci1_split1 = fibonnaci2_split1;
-		fibonnaci1_split2 = fibonnaci2_split2;
-		fibonnaci2_split1 = split1;
-		fibonnaci2_split2 = split2;
+		fibb1_split1 = fibb2_split1;
+		fibb1_split2 = fibb2_split2;
+		fibb2_split1 = split1;
+		fibb2_split2 = split2;
 	}
 	printf("\n");
 	return (0);
