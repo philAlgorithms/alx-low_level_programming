@@ -11,7 +11,8 @@ int main(void)
 {
 	int index;
 	unsigned long fibonnaci1 = 0, fibonnaci2 = 1, summation;
-	unsigned long fibonnaci1_split1, fibonnaci1_split2, fibonnaci2_split1, fibonnaci2_split2;
+	unsigned long fibonnaci1_split1, fibonnaci1_split2;
+	unsigned long fibonnaci2_split1, fibonnaci2_split2;
 	unsigned long split1, split2;
 
 	for (index = 0; index < 92; index++)
