@@ -9,7 +9,7 @@
  */
 
 int main() {
-	char letters = "_putchar";
-	_putchar(letters);
+	char* letters = "_putchar";
+	_putchar(*letters);
 	return (0);
 }
