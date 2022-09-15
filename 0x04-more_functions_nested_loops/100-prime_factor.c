@@ -2,6 +2,8 @@
 
 /**
  * main - prints the prime factor of a number
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
