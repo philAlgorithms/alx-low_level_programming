@@ -2,7 +2,7 @@
 
 /**
  * _strcpy - copies the string pointed to by src,
- * including the terminating null byte (\0), to the buffer pointed to by dest
+ * including the terminating null byte to the buffer pointed to by dest
  * @dest: A buffer to copy the string
  * @src: The source string to copy
  *
@@ -17,6 +17,8 @@ char *_strcpy(char *dest, const char *src)
 		dest[index] = src[index];
 		index++;
 	}
+
+	dest[index] = '\0';
 
 	return (dest);
 }
