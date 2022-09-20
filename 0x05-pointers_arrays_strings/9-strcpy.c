@@ -6,16 +6,16 @@
  * @dest: A buffer to copy the string
  * @src: The source string to copy
  *
- * Return: return a  pointer to dest
+ * Return: a pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int index = 0;
 
-	while (src[i])
+	while (src[index])
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
 
 	return (dest);
