@@ -6,9 +6,9 @@
  * @dest: A buffer to copy the string
  * @src: The source string to copy
  *
- * Return: a pointer to dest
+ * Return: A pointer to the destination string @dest
  */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, const char *src)
 {
 	int index = 0;
 
