@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _isupper - checks for uppercase character.
- * @c: The character to be checked
- *
- * Return: 1 if character is upercase, 0 otherwise
+ * reset_to_98 - takes a pointer to an int as parameter
+ * and updates the value it points to to 98.
+ * @n: The pointer to an integer
  */
 void reset_to_98(int *n)
 {
