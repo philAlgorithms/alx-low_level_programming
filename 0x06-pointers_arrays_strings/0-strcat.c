@@ -12,7 +12,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char dest2[200];
+	char dest2[900];
 	char *ptr = dest2;
 
 	int i = 0, j = 0;
