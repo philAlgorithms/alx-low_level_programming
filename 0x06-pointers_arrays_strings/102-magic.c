@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - prints string
- *
- * Return: Always 0
- */
 int main(void)
 {
 	int n;
@@ -16,7 +11,7 @@ int main(void)
 	/*
 	 * write your line of code here...
 	 * Remember:
-	 * - you are not allowed to use
+	 * - you are not allowed to use a
 	 * - you are not allowed to modify p
 	 * - only one statement
 	 * - you are not allowed to code anything else than this line of code
