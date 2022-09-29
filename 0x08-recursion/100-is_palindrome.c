@@ -7,10 +7,10 @@
  */
 int _strlen(char *s)
 {
-	if(*s)
+	if (*s)
 		return (1 + _strlen(s + 1));
 	else
-		return 0;
+		return (0);
 }
 /**
  * check_palindrome - checks if string if palindome recursively
