@@ -31,7 +31,7 @@ int check_palindrome(char *s, int i, int len)
 	return (0);
 }
 
-/*
+/**
  * is_palindrome - checks if a string can be spelt the same either ways
  * @s: a pointer to the string
  *
