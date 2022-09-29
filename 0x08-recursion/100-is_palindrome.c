@@ -7,11 +7,10 @@
  */
 int _strlen(char *s)
 {
-	int len = 0;
-
-	while (*s++)
-		len++;
-	return (len);
+	if(*s)
+		return (1 + _strlen(s + 1));
+	else
+		return 0;
 }
 /**
  * check_palindrome - checks if string if palindome recursively
@@ -32,7 +31,7 @@ int check_palindrome(char *s, int i, int len)
 	return (0);
 }
 
-/**
+/*
  * is_palindrome - checks if a string can be spelt the same either ways
  * @s: a pointer to the string
  *
