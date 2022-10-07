@@ -6,6 +6,8 @@
  * @ptr: a pointed to the old memory
  * @old_size: size, in bytes, of the allocated space for ptr
  * @new_size: new size, in bytes of the new memory block
+ *
+ * Return: a pointer to the reallocated space in memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -23,6 +25,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (memory);
 	}
 
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
 	ptr_clone = ptr;
 	memory = malloc(sizeof(*ptr_clone) * new_size);
 
@@ -36,6 +44,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	for (i = 0; i < new_size && i < old_size; i++)
 		mem_val[i] = *ptr_clone++;
+
 	free(ptr);
 	return (memory);
 }
