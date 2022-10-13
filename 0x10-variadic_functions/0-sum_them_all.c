@@ -4,6 +4,8 @@
 /**
  * sum_them_all - sums up a given amount of integer arguments
  * @n: number of arguments
+ * @...: A variable number of paramters to be sumed up
+ *
  * Return: sum of arguments
  */
 int sum_them_all(const unsigned int n, ...)
