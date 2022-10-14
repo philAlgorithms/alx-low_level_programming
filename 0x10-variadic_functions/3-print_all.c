@@ -29,6 +29,24 @@ void print_comma(int i, int len)
 }
 
 /**
+ * print_nil - prints nill
+ */
+int print_nil(void)
+{
+	printf("(nil)");
+	return (0);
+}
+
+/**
+ * print_str - prints string
+ */
+int print_str(char *str)
+{
+	printf("%s", str);
+	return (0);
+}
+
+/**
  * print_all - prints anything
  * @format: the type format of a respective parameter
  */
@@ -44,28 +62,23 @@ void print_all(const char * const format, ...)
 	{
 		switch (format[format_index])
 		{
-		case 'f':
-			printf("%f", va_arg(objects, double));
-			print_comma(format_index, length);
-			break;
-		case 'c':
-			printf("%c", va_arg(objects, int));
-			print_comma(format_index, length);
-			break;
-		case 'i':
-			printf("%d", va_arg(objects, int));
-			print_comma(format_index, length);
-			break;
-		case 's':
-			str = va_arg(objects, char *);
-
-			if (str == NULL)
-			{
-				printf("(nil)");
+			case 'f':
+				printf("%f", va_arg(objects, double));
 				print_comma(format_index, length);
 				break;
-			}
-				printf("%s", str);
+			case 'c':
+				printf("%c", va_arg(objects, int));
+				print_comma(format_index, length);
+				break;
+			case 'i':
+				printf("%d", va_arg(objects, int));
+				print_comma(format_index, length);
+				break;
+			case 's':
+				str = va_arg(objects, char *);
+
+				str == NULL && print_nil();
+				str != NULL && print_str(str);
 				print_comma(format_index, length);
 				break;
 		}
