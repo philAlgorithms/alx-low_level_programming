@@ -58,9 +58,10 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(objects, char *);
-			while(str == NULL)
+			if (str == NULL)
 			{
-				printf("(nil), ");
+				printf("(nil)");
+				print_comma(format_index, length);
 				break;
 			}
 			printf("%s", str);
