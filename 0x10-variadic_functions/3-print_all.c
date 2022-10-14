@@ -30,6 +30,8 @@ void print_comma(int i, int len)
 
 /**
  * print_nil - prints nill
+ *
+ * Returns: Always 0
  */
 int print_nil(void)
 {
@@ -39,6 +41,9 @@ int print_nil(void)
 
 /**
  * print_str - prints string
+ * @str - the string
+ *
+ * Returns: Always 0
  */
 int print_str(char *str)
 {
