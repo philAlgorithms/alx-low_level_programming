@@ -18,15 +18,14 @@ int _strlen(const char * const s)
 }
 
 /**
- * print_str - prints string
- * @str - the string
- *
- * Returns: Always 0
+ * print_comma - prints a comma followed by a space
+ * @i: index
+ * @len: length
  */
-int print_str(char *str)
+void print_comma(int i, int len)
 {
-	printf("%s", str);
-	return (0);
+	if (i < len - 1)
+		printf(", ");
 }
 
 /**
