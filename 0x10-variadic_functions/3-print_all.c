@@ -18,28 +18,6 @@ int _strlen(const char * const s)
 }
 
 /**
- * print_comma - prints a comma followed by a space
- * @i: index
- * @len: length
- */
-void print_comma(int i, int len)
-{
-	if (i < len - 1)
-		printf(", ");
-}
-
-/**
- * print_nil - prints nill
- *
- * Returns: Always 0
- */
-int print_nil(void)
-{
-	printf("(nil)");
-	return (0);
-}
-
-/**
  * print_str - prints string
  * @str - the string
  *
@@ -82,8 +60,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(objects, char *);
 
-				str == NULL && print_nil();
-				str != NULL && print_str(str);
+				str == NULL ? printf("(nil)") : printf("%s", str);
 				print_comma(format_index, length);
 				break;
 		}
