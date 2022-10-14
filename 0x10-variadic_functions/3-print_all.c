@@ -17,7 +17,7 @@ int _strlen(const char * const s)
 
 	if (*s)
 		return (res + 1 + _strlen(s + 1));
-		return (0);
+	return (0);
 }
 
 /**
