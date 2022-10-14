@@ -2,6 +2,9 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+int _strlen(const char * const s);
+void print_comma(int i, int len);
+
 /**
  * _strlen - returns the length of a string.
  * @s: pointer to the string
@@ -14,7 +17,6 @@ int _strlen(const char * const s)
 
 	if (*s)
 		return (res + 1 + _strlen(s + 1));
-	else
 		return (0);
 }
 
