@@ -2,9 +2,6 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
-int _strlen(const char * const s);
-void print_comma(int i, int len);
-
 /**
  * _strlen - returns the length of a string.
  * @s: pointer to the string
@@ -33,7 +30,7 @@ void print_comma(int i, int len)
 
 /**
  * print_all - prints anything
- * @format - the type format of a respective parameter
+ * @format: the type format of a respective parameter
  */
 void print_all(const char * const format, ...)
 {
@@ -41,11 +38,12 @@ void print_all(const char * const format, ...)
 	va_list objects;
 	int format_index = 0;
 	char *str;
-	
+
 	va_start(objects, format);
 	while (format_index < length)
 	{
-		switch (format[format_index]){
+		switch (format[format_index])
+		{
 		case 'f':
 			printf("%f", va_arg(objects, double));
 			print_comma(format_index, length);
@@ -64,7 +62,6 @@ void print_all(const char * const format, ...)
 			print_comma(format_index, length);
 			break;
 		}
-		
 		format_index++;
 	}
 	printf("%c", '\n');
