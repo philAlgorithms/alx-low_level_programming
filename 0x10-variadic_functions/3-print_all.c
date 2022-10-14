@@ -60,8 +60,7 @@ void print_all(const char * const format, ...)
 			str = va_arg(objects, char *);
 			while(str == NULL)
 			{
-				printf("(nil)");
-				print_comma(format_index, length);
+				printf("(nil), ");
 				break;
 			}
 			printf("%s", str);
