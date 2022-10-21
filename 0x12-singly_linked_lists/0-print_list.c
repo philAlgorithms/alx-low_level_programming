@@ -1,5 +1,37 @@
-#include <stdio.h>
 #include "lists.h"
+
+/**
+ * print_number - prints an integer
+ * @n: The integer
+ */
+void print_number(int n)
+{
+	unsigned int number = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		number = -1 * number;
+	}
+	if ((number / 10) > 0)
+		print_number(number / 10);
+	_putchar((number % 10) + '0');
+}
+
+/**
+ * print_string - prints a string
+ * @s: The pointer to string
+ */
+void print_string(char *s)
+{
+	int length = 0, index = 0;
+
+	while (s[index++])
+		length++;
+
+	for (index = 0; index < length; index++)
+		_putchar(s[index]);
+}
 
 /**
  * print_list - prints the content of a singly linked list
@@ -16,7 +48,13 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", h->len, h->str);
+		{
+			_putchar('[');
+			print_number(h->len);
+			_putchar(']');
+			print_string(h->str);
+			_putchar('\n');
+		}
 
 		length++;
 		h = h->next;
